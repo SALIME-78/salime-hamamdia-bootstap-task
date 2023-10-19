@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="d-flex justify-content-between align-items-center" style="height: 55px; width:100vw ;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
+      <div class="container-fluid">
+        <div class="logo-container d-flex justify-content-around align-items-center mx-4"
+          style="width: 100px;height: 50px;">
+          <img class="w-100 h-100" src="img/logog-removebg.png" alt="logo">
+          <span class="mx-3">ALGERIA</span>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link border dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Top Destinations
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Tassili</a></li>
+                <li><a class="dropdown-item" href="#">Mediterranean Coast</a></li>
+                <li>
+                </li>
+                <li><a class="dropdown-item" href="#">Oran</a></li>
+                <li><a class="dropdown-item" href="#">Telemcen</a></li>
+                <li><a class="dropdown-item" href="#">Ghardaïa</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex w-50" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success mx-2" type="submit">Search</button>
+            <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#myModal">
+              Login
+            </button>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Sign In</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body p-4 p-md-5">
+                    <form action="#" class="login-form">
+                      <div class="form-group">
+                        <input type="text" class="form-control rounded-left" placeholder="Username">
+                      </div>
+                      <div class="form-group d-flex my-3">
+                        <input type="password" class="form-control rounded-left" placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
+                      </div>
+                      <div class="form-group d-flex justify-content-between w-100">
+                        <div class="form-check w-50">
+                          <label class="custom-control fill-checkbox">
+                            <input type="checkbox" class="fill-control-input">
+                            <span class="fill-control-indicator"></span>
+                            <span class="fill-control-description">Remember Me</span>
+                          </label>
+                        </div>
+                        <div class="w-50 text-md-right">
+                          <a href="#">Forgot Password</a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer justify-content-center">
+                    <p>Not a member? <a href="#">Create an account</a></p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    </div>
+  </header>
+
+  <section class="social-icons">
+    <div class="container">
+      <div class="btn fb-btn">
+        <i class="fa-brands fa-facebook-f"></i>
+      </div>
+      <div class="btn ig-btn">
+        <i class="fa-brands fa-square-instagram"></i>
+      </div>
+      <div class="btn tw-btn">
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+      <div class="btn tw-btn">
+        <i class="fa-brands fa-github-alt"></i>
+      </div>
+      <div class="btn tw-btn">
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-------------------- Section Home Start ------------------------>
+  <section class="home h-100 z-1">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" style="height: 89vh;">
+        <div class="carousel-item active h-100">
+          <div class="container h-75">
+            <h2>HOGGAR</h2>
+            <p>Beautiful City</p>
+          </div>
+          <img src="img/tour1.avif" class="d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item h-100">
+          <div class="container h-75">
+            <h2>ALGIERS</h2>
+            <p>Beautiful City</p>
+          </div>
+          <img src="img/tour5.avif" class="d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item h-100">
+          <div class="container h-75">
+            <h2>Timgad</h2>
+            <p>Beautiful City</p>
+          </div>
+          <img src="img/tour4.avif" class="d-block w-100 h-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next" style="z-index: 999">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <!--------------------- Section Home End -------------------------->
+
+  <!-------------------- Section Welcome Start ----------------------->
+  <section class="welcome">
+    <div>
+      <div class="p-4" style="background-color: rgb(205, 245, 245);">
+        <h2 class="text-capitalize fw-bold text-secondary">Welcome To Algeria</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque debitis, dolore inventore nisi illo doloribus
+          dolor eos quaerat voluptatem facere ipsum delectus cum laudantium dolores fuga quam excepturi quisquam sunt!
+        </p>
+
+        <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#moreContent"
+          aria-expanded="false" aria-controls="moreContent">
+          Learn More
+        </button>
+      </div>
+      <div class="collapse mt-3 p-4" id="moreContent">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt alias, quisquam adipisci officia, numquam
+          quos blanditiis cum in facilis voluptatem, quasi sequi possimus non laborum laudantium. Eos blanditiis vero
+          sint!. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae aut qui, ab asperiores dolor,
+          molestiae ea excepturi voluptatibus explicabo earum, voluptatum laborum in sit. Assumenda, cum voluptatibus!
+          Quia, tempore laboriosam!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, quis dolor, facere
+          autem beatae repellat maiores qui voluptatum id, porro dicta assumenda. Impedit perspiciatis perferendis esse
+          sequi laboriosam, facilis omnis!</p>
+      </div>
+    </div>
+    <div>
+      <div class="dest d-flex">
+        <h2 class="text-white" style="font-size: 42px;">Popular Destinations in Algeria</h2>
+      </div>
+      <div class="accordion mb-5" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+              style="color: rgb(238, 133, 40)">
+              ALGIERS
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body p-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime placeat autem ratione. Qui illo cum
+              voluptatem ratione, magnam delectus odit harum perferendis, commodi, iure itaque natus. Quam dignissimos
+              minus repellendus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis explicabo deleniti
+              porro vitae voluptatum similique nobis, ab ut corporis distinctio? Dolore culpa perferendis ipsam
+              recusandae optio qui dolor similique debitis.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+              style="color: rgb(238, 133, 40)">
+              ORAN
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore in totam error quod numquam rerum
+              nesciunt assumenda quas minus, ipsa aliquid enim et aliquam? Earum maiores architecto nostrum deleniti
+              necessitatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non laborum, iusto
+              dignissimos voluptatem sequi. Minima dolores officia nostrum temporibus sequi odio, harum adipisci
+              reprehenderit dolor obcaecati reiciendis aut dolorum.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+              style="color: rgb(238, 133, 40);">
+              ANNABA
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum sequi in! Esse facere deserunt
+              maiores id quia, cum enim officiis molestias voluptatum aperiam minima impedit, mollitia exercitationem
+              adipisci? Tempora! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam iusto autem mollitia
+              maxime, corrupti explicabo nam facere quo aliquam sunt. Hic voluptas cupiditate doloribus ipsum suscipit
+              nemo aut fugiat quidem?
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!---------------------- Section Welcome End ------------------------>
+
+  <!-------------------- Section Translation Start -------------------->
+  <section class="translation">
+    <h2 class="m-0">Translate From Arabic to English</h2>
+    <div class="p-5 bg-info-subtle">
+      <div class="mb-3">
+        <p style="font-size: 24px; color: gray">Write and Translate: Press Here</p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Translate
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+      </div>
+    </div>
+    <div>
+      <h2 class="m-0">Translate From English to Arabic</h2>
+      <div class="p-5 bg-info-subtle">
+        <div class="mb-3">
+          <p style="font-size: 24px; color: gray">Write and Translate: Press Here</p>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Translate
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+        </div>
+      </div>
+  </section>
+  <!--------------------- Section Translation End ------------------------>
+
+  <section>
+    <!---------------------- Statistics Section Start ----------------------->
+    <div class="statistics">
+      <div class="overlay">
+        <div class="statistics-container">
+          <div class="statistics-list">
+            <div class="statistic">
+              <i class="icon fa fa-users"></i>
+              <h3 class="statistic-title">30k</h3>
+              <span class="statistic-desc">Our Visitors</span>
+            </div>
+            <div class="statistic">
+              <i class="fa fa-smile"></i>
+              <h3 class="statistic-title">90%</h3>
+              <span class="statistic-desc">Satisfaction Rate</span>
+            </div>
+            <div class="statistic">
+              <i class="fa fa-user-pen"></i>
+              <h3 class="statistic-title">85%</h3>
+              <span class="statistic-desc">Engagement Rate</span>
+            </div>
+            <div class="statistic">
+              <i class="fa fa-battery-full"></i>
+              <h3 class="statistic-title">99%</h3>
+              <span class="statistic-desc">Performance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--------------------- Statistics Section End ------------------------->
+
+  <!----------------- Popular Destinations Section Start --------------------->
+  <section class="container popular-dest my-5">
+    <h2 class="my-5 text-center">Popular Landmarks</h2>
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col mb-4 hovered">
+        <div class="card">
+          <img src="img/constantine.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">This is a longer card with supporting.</p>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">Constantine</h5>
+              <button class="btn btn-info">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4 hovered">
+        <div class="card">
+          <img src="img/gettyimages-1198690454-2048x2048.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">This is a longer card with supporting.</p>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">Constantine</h5>
+              <button class="btn btn-info">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4 hovered">
+        <div class="card">
+          <img src="img/gettyimages-1198690510-2048x2048.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">This is a longer card with supporting.</p>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">Constantine</h5>
+              <button class="btn btn-info">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4 hovered">
+        <div class="card">
+          <img src="img/gettyimages-1466474263-2048x2048.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">This is a longer card with supporting.</p>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">Constantine</h5>
+              <button class="btn btn-info">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4 hovered">
+        <div class="card">
+          <img src="img/gettyimages-1340562041-2048x2048.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">This is a longer card with supporting.</p>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">Constantine</h5>
+              <button class="btn btn-info">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4 hovered">
+        <div class="card">
+          <img src="img/photo-511119924-612x612.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">This is a longer card with supporting.</p>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">Constantine</h5>
+              <button class="btn btn-info">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4 hovered">
+        <div class="card">
+          <img src="img/gettyimages-1242037728-2048x2048.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">This is a longer card with supporting.</p>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">Constantine</h5>
+              <button class="btn btn-info">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+      </div>
+      <div class="col mb-4 hovered">
+        <div class="card">
+          <img src="img/gettyimages-1198683021-2048x2048.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">This is a longer card with supporting.</p>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">Constantine</h5>
+              <button class="btn btn-info">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!----------------- Popular Destinations Section End ---------------------->
+
+  <!----------------- Album Section Start ---------------------------------->
+  <section class="album">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center mb-5">
+          <h1 class="font-weight-bolder">Photos Album</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4 p-0 rounded-4 card-container"
+          style="background-image: url(img/gettyimages-1340562041-2048x2048.jpg);">
+          <div class="card text-white card-has-bg click-col rounded-4">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <h5 class="card-meta mb-2">Constantine City</h5>
+                <p><i class="far fa-clock"></i> October 10, 2023</p>
+              </div>
+              <div class="ca-footer">
+                <div class="ca-footer-img">
+                  <img class="mr-3 rounded-circle" src="img/gettyimages-1340562041-2048x2048.jpg" alt="">
+                  <div class="ca-footer-body">
+                    <h6 class="my-0 d-block">Constantine</h6>
+                    <small>Good City</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 mx-4 p-0 rounded-4 card-container"
+          style="background-image: url(img/gettyimages-1198683056-2048x2048.jpg);">
+          <div class="card text-white card-has-bg click-col rounded-4">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <h5 class="card-meta mb-2">Hoggar</h5>
+                <p><i class="far fa-clock"></i> October 10, 2023</p>
+              </div>
+              <div class="ca-footer">
+                <div class="ca-footer-img">
+                  <img class="mr-3 rounded-circle" src="img/gettyimages-1198683056-2048x2048.jpg" alt="">
+                  <div class="ca-footer-body">
+                    <h6 class="my-0 d-block">Hoggar</h6>
+                    <span>Good City</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4 p-0 rounded-4 card-container"
+          style="background-image: url(img/gettyimages-1466474263-2048x2048.jpg);">
+          <div class="card text-white card-has-bg click-col rounded-4">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <h5 class="card-meta mb-2">Tamanrasset</h5>
+                <p><i class="far fa-clock"></i> October 10, 2023</p>
+              </div>
+              <div class="ca-footer">
+                <div class="ca-footer-img">
+                  <img class="mr-3 rounded-circle" src="img/gettyimages-1466474263-2048x2048.jpg" alt="">
+                  <div class="ca-footer-body">
+                    <h6 class="my-0 d-block">Tamanrasset</h6>
+                    <small>Good City</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!----------------------------- Album Section End ------------------------->
+
+  <!--------------------- Most Visited Section Start ------------------------>
+  <section class="most-visited">
+    <h2 class="mb-5">Most Visited</h2>
+    <div style="height: 400px; position: relative">
+      <div class="most-visited-container">
+        <div class="box text-start p-4 ps-5">
+          <h1>First City</h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2023-10-10 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Tue, Apr 20th 2023
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <p class="text-wrap">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+            of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining
+          </p>
+          <ul class="postcard__tagbox d-flex w-100">
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+            <li class="tag__item play blue">
+              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            </li>
+          </ul>
+        </div>
+        <div class="box first-box">
+
+        </div>
+      </div>
+    </div>
+    <div style="height: 400px; position: relative; margin: 50px 0; transform: rotateY(180deg);">
+      <div class="most-visited-container">
+        <div class="box">
+          <div class="text-start p-4" style="transform: scaleX(-1)">
+            <h1>Second City</h1>
+            <div class="postcard__subtitle small">
+              <time datetime="2023-10-10 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i>Tue, Apr 20th 2023
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <p class="text-wrap">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+              the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+              of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+              but also the leap into electronic typesetting, remaining
+            </p>
+            <ul class="postcard__tagbox d-flex w-100">
+              <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+              <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+              <li class="tag__item play blue">
+                <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="box middle-box">
+
+        </div>
+      </div>
+    </div>
+    <div style="height: 400px; position: relative">
+      <div class="most-visited-container">
+        <div class="box text-start p-4 ps-5">
+          <h1>Third City</h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2023-10-10 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Tue, Apr 20th 2023
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <p class="text-wrap">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+            of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining
+          </p>
+          <ul class="postcard__tagbox d-flex w-100">
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+            <li class="tag__item play blue">
+              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            </li>
+          </ul>
+        </div>
+        <div class="box last-box">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--------------------- Most Visited Section End ------------------------>
+
+  <!--------------------- Social Links Section Start ---------------------->
+  <section class="social-links my-4">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>JOIN US</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3 link mb-4">
+          <div class="card p-3 text-center">
+            <h4>Subscribe Now</h4>
+            <img class="m-auto" src="https://img.icons8.com/fluency/96/000000/twitter.png" alt="Twitter">
+            <a href="#" class="text-info mt-3">Go to link</a>
+          </div>
+        </div>
+        <div class="col-md-3 link mb-4">
+          <div class="card p-3 text-center">
+            <h4>Follow</h4>
+            <img class="m-auto" src="https://img.icons8.com/fluency/96/000000/whatsapp.png" alt="WhatsApp">
+            <a href="#" class="text-info mt-3">Go to link</a>
+          </div>
+        </div>
+        <div class="col-md-3 link mb-4">
+          <div class="card p-3 text-center">
+            <h4>Like the page</h4>
+            <img class="m-auto" src="https://img.icons8.com/fluency/96/000000/linkedin.png" alt="LinkedIn">
+            <a href="#" class="text-decoration-none text-info mt-3">Go to link</a>
+          </div>
+        </div>
+        <div class="col-md-3 link mb-4">
+          <div class="card p-3 text-center">
+            <h4>Watch videos</h4>
+            <img class="m-auto" src="https://img.icons8.com/fluency/96/000000/instagram-new.png" alt="Instagram">
+            <a href="#" class="text-info mt-3">Go to link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--------------------- Social Links Section End ------------------------>
+
+  <!-------------------- Footer Section Start ---------------------------->
+  <footer class="bg-info text-white mt-5 w-100">
+    <div class="mx-4">
+      <div class="row pt-3">
+        <div class="item col-md-3">
+          <div class="text-center">
+            <div class="img-container w-100  border-top border-bottom py-4">
+              <img src="img/constantine.jpg" alt="">
+              <span class="fw-bold">Best City</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column text-center py-4">
+            <span>Tel: 000-000-000</span>
+            <span>Address: Constantine</span>
+            <span>Fax: 000-000-000</span>
+          </div>
+        </div>
+        <div class="item col-md-3">
+          <div class="text-center">
+            <div class="img-container w-100  border-top border-bottom py-4">
+              <img src="img/constantine.jpg" alt="">
+              <span class="fw-bold">Best City</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column text-center py-4">
+            <span>Tel: 000-000-000</span>
+            <span>Address: Constantine</span>
+            <span>Fax: 000-000-000</span>
+          </div>
+        </div>
+        <div class="item col-md-3">
+          <div class="text-center">
+            <div class="img-container w-100  border-top border-bottom py-4">
+              <img src="img/constantine.jpg" alt="">
+              <span class="fs-6">Best City</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column text-center py-3">
+            <span>Tel: 000-000-000</span>
+            <span>Address: Constantine</span>
+            <span>Fax: 000-000-000</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 d-flex justify-content-center border-top border-bottom py-4">
+        <span class="fs-3">CopyRight<i class="fa-regular fa-registered"></i> 2023 Salime Hamamdia</span>
+      </div>
+    </div>
+  </footer>
+  <!--------------------------- Footer Section End ------------------------->
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

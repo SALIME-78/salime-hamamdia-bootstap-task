@@ -1,0 +1,489 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+	overflow-x: hidden;
+}
+
+
+/* home style start */
+.home .carousel-item{
+	min-height: 100vh;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+.home .carousel-item:before{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.35);
+	z-index: -1;
+}
+.home .carousel-item .container{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.home .carousel-item h2{
+	font-size: 80px;
+	color: #ffffff;
+	margin:0 0 10px;
+	opacity: 0;
+}
+.home .carousel-item p{
+	font-size: 30px;
+	margin:0;
+	color: #eeeeee;
+	opacity:0;
+}
+.home .carousel-item.active h2{
+	animation: fadeInLeft 0.5s ease forwards;
+}
+.home .carousel-item.active p{
+	animation: fadeInRight 0.5s ease forwards;
+}
+
+@keyframes fadeInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeInRight{
+	0%{
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.home .carousel-controls{
+	position: absolute;
+	left: 50%;
+	bottom: 40px;
+	z-index: 10;
+	transform: translateX(-50%);
+}
+
+/* home styling end */
+
+/* social icons styling start */
+.social-icons {
+  position: fixed;
+  top: 12%;
+  right: -4.2%;
+  z-index: 9999;
+}
+
+
+.social-icons .container
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+.social-icons .container .btn
+{
+width: 70px;
+height: 70px;
+margin-bottom: 18px;
+font-size: 42px;
+background-color: #1f5de4;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: 2em;
+margin-right: 1em;
+cursor: pointer;
+transition: all 0.3s;
+border-radius: 10px;
+}
+
+.social-icons i.fa
+{
+font-size: 44px;
+}
+.social-icons #fb
+{
+color: #006fff;
+text-shadow: 0 0 30px #006fff;
+}
+.social-icons #ig
+{
+color: #ff5f40;
+text-shadow: 0 0 30px #ff5f40;
+}
+.social-icons #tw
+{
+color: #00acff;
+text-shadow: 0 0 30px #00acff;
+}
+.social-icons .btn.fb-btn
+{
+box-shadow: 0 20px 20px -17px rgba(0,111,255,0.53);
+}
+.social-icons .btn.fb-btn:hover
+{
+transform: scale(1.2);
+box-shadow: 0 30px 45px -15px rgba(0,111,255,0.65);
+}
+.social-icons .btn.ig-btn
+{
+box-shadow: 0 20px 20px -17px rgba(255,16,39,0.5);
+}
+.social-icons .btn.ig-btn:hover
+{
+transform: scale(1.2);
+box-shadow: 0 30px 45px -15px rgba(255,16,39,0.57);
+}
+.social-icons .btn.tw-btn
+{
+box-shadow: 0 20px 20px -17px rgba(0,255,255,0.53);
+}
+.social-icons .btn.tw-btn:hover
+{
+transform: scale(1.2);
+box-shadow: 0 30px 45px -15px rgba(0,111,255,0.6);
+}
+
+/* social icons styling end */
+
+/* translation styling start */
+.translation h2{
+  height: 80px;
+  padding-top: 10px;
+  text-align: center;
+  background-color: #0ddbc3;
+  color:white;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+
+/*********** Statistics Section Start **************/
+.statistics {
+    position: relative;
+    background-image: url(../img/tour1.avif);
+    height:400px;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .statistics-list{
+    overflow:hidden;
+    padding-top: 150px
+  }
+  
+  .statistic {
+    width: 25%;
+    float: left;
+    text-align:center;
+  }
+  
+  .statistic i{
+    font-size: 32px;
+    color:rgb(255, 206.05, 31.875);
+    margin-bottom: 15px;
+  }
+  
+  .statistic-title{
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+  }
+  
+  .statistic-desc {
+    color: white;
+  }
+  /************ Statistics Section End ************/
+
+/* Popular Destinations Section Start */
+
+.dest {
+  height: 200px;
+  background-color: #5ccabd;
+  justify-content: center;
+  align-items: center;
+}
+.popular-dest .card img{
+	height: 400px ;
+}
+
+.hovered {
+  position: relative;
+}
+
+.hovered:hover {
+  color: white;
+  transition: 0.7s
+}
+
+.hovered:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top:0;
+  left: 0;
+  background-color: #606060;
+}
+
+.hovered:hover:after {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-color: rgb(197, 239, 247);
+  transition: 1.5s;
+  z-index: 999;
+}
+
+.hovered:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  right:0;
+  bottom: 0;
+  background-color: #606060;
+}
+
+.hovered:hover:before {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(197, 239, 247);
+  opacity:  0.4;
+  transition: 1.5s;
+  z-index: 999;
+}
+
+/* Popular destination Section End */
+  
+/* album styling start */
+  .album .card-container .card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+	border: none;
+    overflow:hidden;
+	box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
+  }
+  
+  .album .card-container:hover {
+	transform: scale(1.1);
+	transition: 1s ease-out;
+  }
+
+.card-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 330px;
+    height: 450px;
+    height:450px;
+    
+}
+
+.album .ca-footer {
+    display: flex;
+	width: 100%;
+}
+
+.ca-footer-img img {
+	width:120px;
+	height: 150px; 
+	border-radius: 50%
+}
+
+/* album styling end */
+
+
+/* most visited styling start */
+.most-visited{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    padding: 50px 0
+}
+
+.most-visited-container{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.most-visited-container .box{
+    position: relative;
+    height: 100%;
+    display: inline-block;
+    margin-left: -5px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5);
+}
+
+.most-visited-container .box:nth-of-type(1){
+    width: 50%; 
+    background: #262626;  color: #fff;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    vertical-align: top;
+    z-index: 2;
+}
+
+.most-visited-container .box h1{
+    margin-bottom: 15px;
+}
+
+.most-visited-container .box p{
+    line-height: 22px;
+    font-size: 17px; 
+}
+
+.most-visited-container .box:nth-of-type(1)::before{
+    content: '';
+    position: absolute;
+    top: 0; right: -42px;
+    width: 82px;   height: 100%;
+    background: #262626;
+    transform: skewX(4deg);
+    z-index: -1;
+}
+
+.most-visited-container .first-box{
+    width: 28%; 
+    background-image: url(../img/gettyimages-108129144-2048x2048.jpg);
+    background-size: 500px 400px;
+    z-index: 1;
+}
+
+.most-visited-container .middle-box{
+    width: 28%; 
+    background: url(../img/gettyimages-1466474263-2048x2048.jpg);
+    background-size: 500px 400px;
+    z-index: 1;
+}
+
+.most-visited-container .last-box{
+    width: 28%;
+    background: url(../img/gettyimages-1198690553-2048x2048.jpg);
+    background-size: 500px 400px;
+    z-index: 1;
+}
+
+.small {
+	font-size: 80%;
+}
+
+.postcard__title {
+font-size: 1.75rem;
+}
+
+.postcard__bar {
+    width: 50px;
+    height: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #eb3535;
+    transition: width 0.2s ease;
+  }
+
+
+.postcard__tagbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 30px 0 0 0;
+		padding: 0;
+
+    .tag__item {
+      display: inline-block;
+      background: rgba(83, 83, 83, 0.4);
+      border-radius: 3px;
+      padding: 2.5px 10px;
+      margin: 0 5px 5px 0;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: rgba(83, 83, 83, 0.8);
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  &:hover .postcard__bar {
+    width: 100px;
+  }
+
+  /* most visited styling end */
+
+  /* social links styling start */
+  .social-links .link .card {
+    height: 250px;
+    background-color: rgb(246, 248, 250);
+    box-shadow: 16px 16px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-links .link img{
+    width: 85px;
+    height: 85px;
+    background-color: #b7e168;
+    border-radius: 20px;
+    box-shadow: 12px 12px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  /* social styling end */
+
+  footer .item {
+    width: 33%;
+  }
+
+  footer .img-container img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+
+
+
+
+
