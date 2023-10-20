@@ -88,10 +88,9 @@ body {
 .social-icons {
   position: fixed;
   top: 12%;
-  right: -4.2%;
+  right: -4.15%;
   z-index: 9999;
 }
-
 
 .social-icons .container
 {
@@ -481,6 +480,22 @@ font-size: 1.75rem;
     width: 75px;
     height: 75px;
     border-radius: 50%;
+  }
+
+
+
+  @media screen and (max-width:700px){
+    h2{
+      font-size: 30px !important
+    }
+    .album .card-container {
+      width: 90%;
+    }
+    .most-visited-container .box p{
+      overflow: hidden;
+      font-size: 15px;
+      height: 32%; 
+  }
   }
 
 
