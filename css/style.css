@@ -178,6 +178,17 @@ box-shadow: 0 30px 45px -15px rgba(0,111,255,0.6);
   font-size: 36px;
 }
 
+@media screen and (max-width: 768px){
+  .translation h2{
+    font-size: 28px;
+    text-align: center
+  }
+
+  .dest-title h2{
+    font-size: 18px
+  }
+}
+
 
 /*********** Statistics Section Start **************/
 .statistics {
@@ -218,7 +229,7 @@ box-shadow: 0 30px 45px -15px rgba(0,111,255,0.6);
 
 /* Popular Destinations Section Start */
 
-.dest {
+.dest-title {
   height: 200px;
   background-color: #5ccabd;
   justify-content: center;
@@ -319,6 +330,12 @@ box-shadow: 0 30px 45px -15px rgba(0,111,255,0.6);
 	border-radius: 50%
 }
 
+@media screen and (max-width: 768px){
+  .album .card-container {
+    width: 90%
+  }
+}
+
 /* album styling end */
 
 
@@ -346,6 +363,7 @@ box-shadow: 0 30px 45px -15px rgba(0,111,255,0.6);
     text-align: center;
     border-radius: 12px;
     box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5);
+    overflow: hidden
 }
 
 .most-visited-container .box:nth-of-type(1){
@@ -452,6 +470,16 @@ font-size: 1.75rem;
 
   &:hover .postcard__bar {
     width: 100px;
+  }
+
+  @media screen and (max-width: 768px){
+    .most-visited{
+      margin-left: 15px;
+      margin-right: 15px
+    }
+    .most-visited .most-visited-container .box {
+         width: 50%;
+    }
   }
 
   /* most visited styling end */
