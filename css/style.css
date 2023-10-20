@@ -488,6 +488,11 @@ font-size: 1.75rem;
     h2{
       font-size: 30px !important
     }
+    .social-icons .container .btn{
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+    }
     .album .card-container {
       width: 90%;
     }
