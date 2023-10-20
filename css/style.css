@@ -484,26 +484,32 @@ font-size: 1.75rem;
 
 
 
-  @media screen and (max-width:700px){
+  @media screen and (max-width:792px){
     h2{
-      font-size: 30px !important
+      font-size: 26px !important
     }
     .social-icons .container .btn{
       width: 35px;
       height: 35px;
-      font-size: 20px;
+      font-size: 22px;
     }
     .album .card-container {
       width: 90%;
     }
 
-    .most-visited-container .box {
+    .most-visited-container {
       overflow: hidden;
     }
-    .most-visited-container .box p{
+    
+    .most-visited-container .text-wrap{
       overflow: hidden;
       font-size: 15px;
       height: 32%; 
+  }
+
+  .second-city-desc {
+    overflow: hidden;
+    height: 8%;
   }
   }
 
