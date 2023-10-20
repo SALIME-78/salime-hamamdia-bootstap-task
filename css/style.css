@@ -496,6 +496,10 @@ font-size: 1.75rem;
     .album .card-container {
       width: 90%;
     }
+
+    .most-visited-container .box {
+      overflow: hidden;
+    }
     .most-visited-container .box p{
       overflow: hidden;
       font-size: 15px;
